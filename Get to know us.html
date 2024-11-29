@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Company Overview</title>
+    <style>
+        body {
+            background-image: url('4.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "Goudy Bookletter 1911", sans-serif;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+    .central-video {
+        width: 35%; /* Adjust for larger size */
+    }
+    @media screen and (max-width: 768px) {
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+    
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 25%;
+            z-index: 1;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .content {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 80%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            text-align: left;
+            color: rgb(190, 198, 198);
+        }
+        .section {
+            text-align: center;
+        }
+        h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: rgb(243, 136, 14);
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            text-align: left;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        /* 返回主页按钮 */
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            Right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .back-button img {
+            width: 100px;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 縮小並偏上方的影片 -->
+        <video class="central-video" autoplay muted loop>
+            <source src="handmade.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="content">
+            <!-- 左下方 -->
+            <div class="section">
+                <h3>Our Brand</h3>
+                <ul>
+                    <li>Build a brand image centered around health and artisan craftsmanship</li>
+                    <li>Highlight eco-friendly concepts in packaging design</li>
+                </ul>
+            </div>
+            <!-- 中下方 -->
+            <div class="section">
+                <h3>Our Mission</h3>
+                <ul>
+                    <li>Provide healthy, high-quality food options and unique handcrafted products</li>
+                    <li>Meet consumers' needs for refined tastes and lifestyle quality</li>
+                </ul>
+            </div>
+            <!-- 右下方 -->
+            <div class="section">
+                <h3>Our Goals</h3>
+                <ul>
+                    <li>Establish a highly recognized brand in the food and jewelry market</li>
+                    <li>Create a customer experience centered around health and craftsmanship</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 返回主页按钮 -->
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <img src="88.png" alt="Return to Home">
+    </button>
+</body>
+</html>

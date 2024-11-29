@@ -1,0 +1,263 @@
+/* 全局樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.6;
+    background: #000; /* 將背景設為黑色 */
+    color: #fff;
+}
+
+/* 背景圖片樣式 */
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.home-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.home-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+/* 固定右上角的图片和文字 */
+.fixed-image-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    z-index: 999;
+}
+
+.fixed-image {
+    width: 150px; /* 图像宽度调整 */
+    border-radius: 100%; /* 将图像裁剪为圆形 */
+    border: none; /* 去除边框 */
+    box-shadow: none; /* 去除阴影 */
+    object-fit: fill; /* 确保图像内容完全填充 */
+}
+
+.fixed-text {
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffa600;
+    text-shadow: 1px 1px 2px rgba(255, 39, 1, 0.8);
+}
+
+/* 標題樣式 */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    z-index: 3;
+    color: #fbff00;
+    text-align: left;
+    width: 60%;
+}
+
+.text-overlay h1 {
+    font-size: calc(2rem + 1vw);
+    font-weight: 550;
+    text-transform: uppercase;
+    animation: slideIn 5s ease-out forwards;
+}
+
+/* 列表樣式 */
+.bottom-right-list {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    background: none;
+    padding: 20px;
+    z-index: 3;
+    color: #fe0385;
+}
+
+.bottom-right-list ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 80%;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.bottom-right-list ul li {
+    margin-bottom: 10px;
+    opacity: 0; /* 初始不可見 */
+    transform: translateY(-20px); /* 初始位置稍微向上 */
+    animation: fadeDown 2s ease forwards; /* 動畫持續2秒，緩動效果 */
+}
+
+.bottom-right-list ul li:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.bottom-right-list ul li:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.bottom-right-list ul li:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.bottom-right-list ul li:nth-child(4) {
+    animation-delay: 2s;
+}
+
+.bottom-right-list ul li a {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    text-decoration: none;
+    color: #d5d6d6;
+    font-size: 1.5rem;
+    font-weight: normal;
+    transition: color 0.3s;
+}
+
+.bottom-right-list ul li a:hover {
+    color: #ff0101;
+}
+
+/* 動畫效果 */
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* 開始位置稍微向上 */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* 最終位置恢復正常 */
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 手機與平板的自適應樣式 */
+@media screen and (max-width: 768px) {
+    .text-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .fixed-image {
+        width: 10%;
+        max-width: 120px;
+    }
+
+    .bottom-right-list ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .text-overlay h1 {
+        font-size: 1.5rem;
+    }
+
+    .bottom-right-list ul {
+        padding-left: 10px;
+    }
+}
+
+.central-video {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 25%;
+    border-radius: 100px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 左上角主按钮 */
+#main-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#main-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#main-button img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 按钮容器样式 */
+#button-container {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    display: none;
+    flex-direction: column;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+#button-container button {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#button-container button:hover {
+    background-color: #ccc;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Brush Script MT
+            margin: 0;
+            padding: 0;
+            background-image: url('13.png'); /* Set the uploaded background */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        
+    .contact-container {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        align-items: center;
+        gap: 20px;
+    }
+    
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .contact-header {
+            font-family: Brush Script MT,  cursive;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .contact-header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #ff00cc;
+        }
+
+        .contact-header p {
+            font-size: 1.2rem;
+            color: #fd05b3;
+            margin: 10px auto;
+            max-width: 700px;
+        }
+
+        .form-container {
+            flex: 1;
+            min-width: 350px;
+            margin-right: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Transparent form background */
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-container h2 {
+            font-size: 1.8rem;
+            color: #ffa600;
+            margin-bottom: 20px;
+        }
+
+        .form-container form input,
+        .form-container form textarea,
+        .form-container form button {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-container form input,
+        .form-container form textarea {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        .form-container form input::placeholder,
+        .form-container form textarea::placeholder {
+            color: #ddd;
+        }
+
+        .form-container form button {
+            background-color: #ffa600;
+            color: #000;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-container form button:hover {
+            background-color: #ff7700;
+        }
+
+        .info-container {
+            flex: 1;
+            min-width: 300px;
+            background-color: rgba(0, 0, 0, 0.6); /* Transparent info background */
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+
+        .info-container h2 {
+            font-size: 1.8rem;
+            color: #ffa600;
+            margin-bottom: 20px;
+        }
+
+        .info-container p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .info-container a {
+            color: #ffa600;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .info-container a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+       /* 返回主页按钮 */
+       .back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .back-button img {
+            width: 100px;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p>Have any Interest? Reach out to us, and we’ll get back to you ASAP</p>
+    </div>
+    <div class="contact-container">
+
+        <!-- Contact Form -->
+        <div class="form-container">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="info-container">
+            <h2>Contact Information</h2>
+            <p><strong>Address:</strong> Oscar By The Sea, Tseung Kwan O, Hong Kong</p>
+            <p><strong>Email:</strong> <a href="mailto:chikan213@gmail.com">chikan213@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+852 91449139">+852 91449139</a></p>
+            <p><strong>Business Hours:</strong><br>
+                Monday - Friday: 9:00 AM - 6:00 PM<br>
+                Saturday: 10:00 AM - 2:00 PM<br>
+                Sunday: Closed
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 S & K Business. All Rights Reserved.
+    </div>
+     <!-- 返回主页按钮 -->
+     <button class="back-button" onclick="window.location.href='index.html'">
+        <img src="88.png" alt="Return to Home">
+    </button>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Product Line</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('19.png'); /* Set the orange background */
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff69b4; /* Pink font color */
+            margin: 0;
+        }
+
+        
+    .product-line {
+        flex-direction: column; /* For mobile layout */
+        align-items: center;
+        gap: 20px;
+    }
+    .section img {
+        width: 150px; /* Uniform size */
+        height: 150px;
+    }
+    
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .section {
+            flex: 1;
+            text-align: center;
+            background-color: #ffe4e1; /* Light pink for sections */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .section img {
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff69b4; /* Bold pink title for sections */
+            margin: 20px 0 10px;
+        }
+
+        .section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fe9400; /* Footer background */
+            color: #fff;
+            margin-top: 50px;
+        }
+
+        .footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+         /* 返回主页按钮 */
+       .back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .back-button img {
+            width: 100px;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Our Product Line</h1>
+    </div>
+
+    <!-- Product Line Sections -->
+    <div class="product-line">
+        <!-- Left Section -->
+        <div class="section">
+            <img src="777.jpg" alt="Mineral Water">
+            <h2>Mineral Water</h2>
+            <p>Mineral water, pure and refreshing, quenches thirst naturally. Rich in minerals, it revitalizes, hydrates, and supports a healthy lifestyle.</p>
+        </div>
+
+        <!-- Center Section -->
+        <div class="section">
+            <img src="101.jpg" alt="Homemade snacks">
+            <h2>Homemade snacks</h2>
+            <p>Homemade snacks, crafted with love, offer wholesome flavors, fresh ingredients, and a comforting taste of tradition and care.</p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="section">
+            <img src="000.png" alt="Jade Jewelry">
+            <h2>Jade Jewelry</h2>
+            <p>Jade jewelry, timeless and elegant, symbolizes purity and prosperity. Its vibrant hues reflect nature's beauty and cultural heritage.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 S & K Business. All Rights Reserved.</p>
+    </div>
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <img src="88.png" alt="Return to Home">
+    </button>
+</body>
+</html>
